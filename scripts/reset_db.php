@@ -4,7 +4,6 @@ include('../config.php');
 include('../lib/load.php');
 include('../lib/connect_db.php');
 
-
 $str = trim(file_get_contents('reset.sql'));
 $str = str_replace("#{DB_NAME}", $cfg['mysql']['database'], $str);
 $file_content = split(";", $str);
