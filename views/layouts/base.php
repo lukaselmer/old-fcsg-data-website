@@ -10,6 +10,7 @@
         <script src="/public/js/prototype.js" type="text/javascript"></script>
         <script src="/public/js/scriptaculous.js" type="text/javascript"></script>
         <script src="/public/js/application.js" type="text/javascript"></script>
+        <script src="/public/js/rounded.js" type="text/javascript"></script>
 
         <meta name="language" content="de" />
         <meta name="author" content="Lukas Elmer" />
@@ -21,7 +22,15 @@
 
     </head>
     <body>
+        <div class="base-outer">
+            <div class="base-inner">
+                <?php echo $view_content; ?>
+            </div>
+        </div>
 
-        <?php echo $view_content; ?>
+        <script type="text/javascript">
+            Rounded('rounded', 6, 6);
+        </script>
+
     </body>
 </html>

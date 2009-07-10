@@ -1,4 +1,29 @@
 
+.base-outer {
+    width: 100%;
+    text-align: center;
+}
+
+.base-inner {
+    margin: auto;
+    width: 750px;
+    text-align: left;
+}
+
 .players {
+    width: 732px;
     background-color: #E7E7E7;
+    background-color: #008F46;
+}
+
+.players .inner {
+    padding: 3px 6px 3px 5px;
+}
+
+.player {
+    background-color: #FFF;
+    color: #00763B;
+}
+.player .inner {
+    padding: 0px 6px 0px 5px;
 }
