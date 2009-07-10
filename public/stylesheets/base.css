@@ -5,6 +5,11 @@ body {
     margin: 0;
     font: 12px Verdana, Arial, sans-serif;
     font-size: 0.75em;
+    background-color: #DFDFDF;
+    background-color: #DFFFEF;
+    background-color: #E0EFE7;
+    background-color: #EFFFF7;
+    background-color: #DFFFE3;
 }
 
 .base-outer {
@@ -44,6 +49,7 @@ body {
 
 .footer .inner .white .inner {
     padding: 5px 10px 0 6px;
+    color: #5F5F5F;
 }
 
 
