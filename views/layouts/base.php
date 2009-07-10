@@ -24,6 +24,12 @@
     <body>
         <div class="base-outer">
             <div class="base-inner">
+                <div class="header rounded">
+                    <div class="inner">
+                        <? echo image_tag('logo.png'); ?>
+                    </div>
+                </div>
+
                 <div class="main-content">
                     <?php echo $view_content; ?>
                 </div>
@@ -32,7 +38,9 @@
                     <div class="inner">
                         <div class="white rounded">
                             <div class="inner">
-                                webdesign &amp; development by Lukas Elmer
+                                <small><b>
+                                        webdesign &amp; development by Lukas Elmer
+                                </b></small>
                             </div>
                         </div>
                     </div>

@@ -18,26 +18,20 @@ body {
     text-align: left;
 }
 
-.players {
-    background-color: #008F46;
+.header {
+    background-color: #00763B;
+    margin: 6px 0 6px 0;
 }
 
-.players .inner {
-    padding: 3px 6px 3px 6px;
-}
-
-.player {
-    background-color: #FFF;
-    color: #00763B;
-}
-.player .inner {
-    padding: 0px 6px 0px 6px;
+.header .inner {
+    padding: 3px;
 }
 
 .footer {
     margin: 6px 0 0 0;
     text-align: right;
     background-color: #008F46;
+    background-color: #00763B;
 }
 
 .footer .inner {
@@ -49,6 +43,32 @@ body {
 }
 
 .footer .inner .white .inner {
-    padding: 1px 6px 1px 6px;
+    padding: 5px 10px 0 6px;
 }
 
+
+
+
+
+
+.players {
+    background-color: #008F46;
+    background-color: #00763B;
+}
+.players .inner {
+    padding: 0px 6px 1px 6px;
+}
+
+.player {
+    background-color: #FFF;
+    color: #00763B;
+}
+.player .inner .name {
+    cursor: pointer;
+}
+.player .inner .description {
+    padding: 8px 0;
+}
+.player .inner {
+    padding: 0px 6px 0px 6px;
+}
