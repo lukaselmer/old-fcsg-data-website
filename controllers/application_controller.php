@@ -1,9 +1,12 @@
 <?php
 
-class PlayersController extends ApplicationController{
+class ApplicationController {
+    #global $DB;
+    function layout($name = 'base'){
+        
+    }
+
     function index(){
-        global $DB;
-        $this->players = $DB->select("select * from players");
     }
 
     function nnew(){
