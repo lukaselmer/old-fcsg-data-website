@@ -7,4 +7,9 @@ function link_to($name, $controller, $action){
     return "<a href=\"$url\">$name</a>";
 }
 
+function image_tag($img){
+    $alt = split($img, '.'); $alt = $alt[0];
+    return "<img src=\"/public/images/$img\" alt=\"$alt\" />";
+}
+
 ?>

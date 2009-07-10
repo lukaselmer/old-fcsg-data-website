@@ -5,7 +5,7 @@
         <title>FC SG Data</title>
         <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
 
-        <link href="/stylesheets/base.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="/public/stylesheets/base.css" media="screen" rel="stylesheet" type="text/css" />
 
         <script src="/public/js/prototype.js" type="text/javascript"></script>
         <script src="/public/js/scriptaculous.js" type="text/javascript"></script>
