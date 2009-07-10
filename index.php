@@ -8,8 +8,7 @@ echo $path_parts['dirname'], "\n";
 echo "XXXXXX";
 echo get_include_path();
 echo "XXXXXX";
-$new_include_path = "C:\\instantrails20\\php_apps\\fcsg-data\\";
-set_include_path($new_include_path);
+set_include_path(get_include_path() + ";" + $path_parts['dirname']);
 
 include('config.php');
 include('lib/load.php');
