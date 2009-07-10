@@ -1,3 +1,11 @@
+html {
+    font-size: 100.01%
+}
+body {
+    margin: 0;
+    font: 12px Verdana, Arial, sans-serif;
+    font-size: 0.75em;
+}
 
 .base-outer {
     width: 100%;
@@ -6,18 +14,16 @@
 
 .base-inner {
     margin: auto;
-    width: 750px;
+    width: 732px;
     text-align: left;
 }
 
 .players {
-    width: 732px;
-    background-color: #E7E7E7;
     background-color: #008F46;
 }
 
 .players .inner {
-    padding: 3px 6px 3px 5px;
+    padding: 3px 6px 3px 6px;
 }
 
 .player {
@@ -25,5 +31,24 @@
     color: #00763B;
 }
 .player .inner {
-    padding: 0px 6px 0px 5px;
+    padding: 0px 6px 0px 6px;
 }
+
+.footer {
+    margin: 6px 0 0 0;
+    text-align: right;
+    background-color: #008F46;
+}
+
+.footer .inner {
+    padding: 0px 6px 0px 6px;
+}
+
+.footer .inner .white {
+    background-color: #FFF;
+}
+
+.footer .inner .white .inner {
+    padding: 1px 6px 1px 6px;
+}
+

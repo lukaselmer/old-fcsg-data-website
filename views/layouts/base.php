@@ -24,7 +24,19 @@
     <body>
         <div class="base-outer">
             <div class="base-inner">
-                <?php echo $view_content; ?>
+                <div class="main-content">
+                    <?php echo $view_content; ?>
+                </div>
+
+                <div class="footer rounded">
+                    <div class="inner">
+                        <div class="white rounded">
+                            <div class="inner">
+                                webdesign &amp; development by Lukas Elmer
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
