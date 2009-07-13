@@ -1,3 +1,6 @@
+
+
+
 <div class="players rounded">
     <div class="inner">
         <? foreach ($players as $player) { ?>
@@ -9,7 +12,7 @@
                     <div class="fl" onclick="toggle_player_description(<? echo $player->id; ?>);"><b><? echo $player->name; ?></b></div>
                     <? clearer(); ?>
                 </div>
-                <div class="description" style="display:none;"><? echo $player->description; ?></div>
+                <div class="description" style="display:none;"><? echo htmlspecialchars_decode($player->description); ?></div>
             </div>
         </div>
         <? } ?>
@@ -24,3 +27,4 @@
 
     </div>
 </div>
+

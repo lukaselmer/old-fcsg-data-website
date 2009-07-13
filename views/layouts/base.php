@@ -11,7 +11,7 @@
         <script src="/public/js/scriptaculous.js" type="text/javascript"></script>
         <script src="/public/js/application.js" type="text/javascript"></script>
         <script src="/public/js/rounded.js" type="text/javascript"></script>
-        <script src="/public/js/tiny_mce.js" type="text/javascript"></script>
+        <script src="/public/js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
 
         <meta name="language" content="de" />
         <meta name="author" content="Lukas Elmer" />

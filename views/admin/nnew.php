@@ -1,3 +1,5 @@
+<? include "_tiny_mce_code.php" ?>
+
 <form name="player" action="<? echo url_for('admin', 'create'); ?>" method="POST" enctype="multipart/form-data">
     <fieldset>
         <legend>Neuer Spieler</legend>

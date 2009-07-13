@@ -34,7 +34,7 @@ VALUES (
         foreach ($player_params as $i => $param) {
             $player_params[$i] = str_replace('"', '&quot;', $param);
         }
-        $this->DB->insert("UPDATE `players` SET
+        $this->DB->update("UPDATE `players` SET
 `name` = \"".$player_params['name']."\",
 `description` = \"".$player_params['description']."\"
 WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
