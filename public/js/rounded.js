@@ -23,7 +23,7 @@ function NiftyCheck() {
       return true;
   }
   if(b.indexOf("firefox") > 0){
-      return false;
+      return true;
   }
   if(b.indexOf("safari") > 0){
       return false;
