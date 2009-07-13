@@ -8,7 +8,7 @@
         <div class="player rounded" id="player_<? echo $player->id; ?>">
             <div class="inner">
                 <div class="name">
-                    <div class="fr"><? link_to('Spieler bearbeiten', 'admin', 'edit', Array(Array('id', $player->id))); ?></div>
+                    <div class="fr"><? link_to('bearbeiten', 'admin', 'edit', Array(Array('id', $player->id))); ?> <? link_to('löschen', 'admin', 'destroy', Array(Array('id', $player->id))); ?></div>
                     <div class="fl" onclick="toggle_player_description(<? echo $player->id; ?>);"><b><? echo $player->name; ?></b></div>
                     <? clearer(); ?>
                 </div>

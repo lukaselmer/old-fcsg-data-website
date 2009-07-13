@@ -22,7 +22,7 @@ VALUES (
 \"".$player_params['name']."\",
 \"".$player_params['description']."\"
 );");
-        redirect_to('admin');
+        redirect_to('admin', 'index');
     }
 
     function edit(){
@@ -42,9 +42,10 @@ WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
         redirect_to('admin');
     }
 
-    function delete(){
+    function destroy(){
         $player_params = $_REQUEST['id'];
         $this->DB->delete("DELETE FROM `players` WHERE `id` = ".intval($player_params['id'])." LIMIT 1;");
+        redirect_to('admin');
     }
 }
 
