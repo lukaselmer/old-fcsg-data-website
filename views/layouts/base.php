@@ -11,6 +11,7 @@
         <script src="/public/js/scriptaculous.js" type="text/javascript"></script>
         <script src="/public/js/application.js" type="text/javascript"></script>
         <script src="/public/js/rounded.js" type="text/javascript"></script>
+        <script src="/public/js/tiny_mce.js" type="text/javascript"></script>
 
         <meta name="language" content="de" />
         <meta name="author" content="Lukas Elmer" />
@@ -26,7 +27,14 @@
             <div class="base-inner">
                 <div class="header rounded">
                     <div class="inner">
-                        <? image_tag('logo.png'); ?>
+                        <div class="fl"><a href="/" style="border:0;"><? image_tag('logo.png'); ?></a></div>
+                        <div class="navi fr">
+                            <ul>
+                                <li><? link_to('Übersicht', 'players') ?></li>
+                                <li><? link_to('Administration', 'admin') ?></li>
+                            </ul>
+                        </div>
+                        <? clearer() ?>
                     </div>
                 </div>
 

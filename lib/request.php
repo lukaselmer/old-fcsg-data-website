@@ -9,6 +9,7 @@ $_GET['controller'] = $contrller_name;
 $_GET['action'] = $action_name;
 
 include('controllers/'.$contrller_name.'_controller.php');
+include('helpers/application_helper.php');
 
 $big_controller_name = ucfirst($contrller_name)."Controller";
 $controller = new $big_controller_name();
@@ -23,7 +24,6 @@ if($stop_output){
     }
 }
 else {
-    include('helpers/application_helper.php');
     ob_start();
     include('views/'.$contrller_name.'/'.$action_name.'.php');
     $view_content = ob_get_contents();

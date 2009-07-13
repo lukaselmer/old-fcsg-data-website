@@ -11,6 +11,11 @@ class DbClass{
         return $objects;
     }
 
+    function select_first($query){
+        $objects = $this->select($query);
+        return $objects[0];
+    }
+
     function insert($query){
         mysql_query($query);
         return mysql_insert_id();

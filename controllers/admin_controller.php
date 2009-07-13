@@ -6,7 +6,7 @@ class AdminController extends ApplicationController{
     }
 
     function nnew(){
-
+        $this->player = Array();
     }
 
     function create(){
@@ -22,10 +22,11 @@ VALUES (
 \"".$player_params['name']."\",
 \"".$player_params['description']."\"
 );");
+        redirect_to('admin');
     }
 
     function edit(){
-
+        $this->player = $this->DB->select_first("select * from players where id = ".intval($_REQUEST['id']));
     }
 
     function update(){
@@ -38,6 +39,7 @@ VALUES (
 `description` = \"".$player_params['description']."\"
 WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
 ");
+        redirect_to('admin');
     }
 
     function delete(){
