@@ -27,6 +27,10 @@
         external_image_list_url : "lists/image_list.js",
         media_external_list_url : "lists/media_list.js",
 
+        height : "400",
+        width : "707",
+
+
         // Replace values for the template plugin
         template_replace_values : {
             username : "Some User",

@@ -44,8 +44,8 @@ WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
     }
 
     function destroy(){
-        $player_params = $_REQUEST['id'];
-        $this->DB->delete("DELETE FROM `players` WHERE `id` = ".intval($player_params['id'])." LIMIT 1;");
+        $player_id = $_REQUEST['id'];
+        $this->DB->delete("DELETE FROM `players` WHERE `id` = ".intval($player_id)." LIMIT 1;");
         redirect_to('admin');
     }
 }

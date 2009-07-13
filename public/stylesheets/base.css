@@ -20,6 +20,12 @@ label { cursor:pointer; }
 a {color:#00763B;}
 p {margin: 8px 0 8px 0;}
 
+label {
+    display: block;
+    margin: 1px 0 2px 0;
+    font-weight: bold;
+}
+
 .base-outer {
     width:100%;
     text-align:center;
