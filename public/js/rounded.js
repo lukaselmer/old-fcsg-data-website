@@ -31,7 +31,6 @@ function NiftyCheck() {
   if(bb.indexOf("opera") > 0){
       return true;
   }
-  alert(b);
   return false;
 }
 
