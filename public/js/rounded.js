@@ -9,22 +9,60 @@ function NiftyCheck() {
     return false;
   }
   var b = navigator.userAgent.toLowerCase();
+  bb = "test"+b;
   if (b.indexOf("msie 5") > 0 && b.indexOf("opera") == -1) {
     return false;
   }
-  return true;
+  if(b.indexOf("msie 6") > 0){
+      return true;
+  }
+  if(b.indexOf("msie 7") > 0){
+      return true;
+  }
+  if(b.indexOf("msie 8") > 0){
+      return true;
+  }
+  if(b.indexOf("firefox") > 0){
+      return false;
+  }
+  if(b.indexOf("safari") > 0){
+      return false;
+  }
+  if(bb.indexOf("opera") > 0){
+      return true;
+  }
+  alert(b);
+  return false;
 }
 
+function reset_css_styles(){
+    $$(".rounded").each(function(el) {
+      el.style.padding = "0";
+    });
+}
+
+/*
+.rounded {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -op-border-radius: 6px;
+    -ie-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px 0px;
+}
+ **/
 function Rounded(className, sizex, sizey, sizex_b, sizey_b) {
 	var bk;
-	if (!NiftyCheck()) return;
-	if (typeof(sizex_b) == 'undefined')
+	if(!NiftyCheck()){return};
+    reset_css_styles();
+	if (typeof(sizex_b) == 'undefined'){
 		sizex_b = sizex;
-	if (typeof(sizey_b) == 'undefined')
+    }
+	if (typeof(sizey_b) == 'undefined'){
 		sizey_b = sizey;
-	var v = getElements(className);
-	var l = v.length;
-	for (var i = 0; i < l; i++) {
+    }
+	var v = $$("div."+className);
+	for (var i = 0; i < v.length; i++) {
 		color = get_current_style(v[i],"background-color","transparent");
 		bk = get_current_style(v[i].parentNode,"background-color","transparent");
 		AddRounded(v[i], bk, color, sizex, sizey, true);
@@ -132,7 +170,9 @@ function AddRounded(el, bk, color, sizex, sizey, top) {
 }
 
 function getElements(className) {
-	var elements = [];
+    return $$("div."+className);
+
+	/*var elements = [];
 	var el = document.getElementsByTagName('DIV');
 	var regexp=new RegExp("\\b"+className+"\\b");
 	for (var i = 0; i < el.length; i++)
@@ -140,7 +180,7 @@ function getElements(className) {
 		if (regexp.test(el[i].className))
 			elements.push(el[i]);
 	}
-	return elements;
+	return elements;*/
 }
 
 function get_current_style(element,property,not_accepted)

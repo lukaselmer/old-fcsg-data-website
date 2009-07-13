@@ -26,6 +26,15 @@ label {
     font-weight: bold;
 }
 
+.rounded {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -op-border-radius: 6px;
+    -ie-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px 0px;
+}
+
 .base-outer {
     width:100%;
     text-align:center;
