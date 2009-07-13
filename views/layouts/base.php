@@ -32,6 +32,7 @@
                             <ul>
                                 <li><? link_to('Übersicht', 'players') ?></li>
                                 <li><? link_to('Administration', 'admin') ?></li>
+                                <? if($authenticated){ ?><li><? link_to('Logout', 'users', 'logout') ?></li><? } ?>
                             </ul>
                         </div>
                         <? clearer() ?>

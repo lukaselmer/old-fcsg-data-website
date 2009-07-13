@@ -5,6 +5,7 @@ class ApplicationController {
         global $DB;
         $this->DB = $DB;
         $this->before_filter();
+        $this->authenticated = $_SESSION['authenticated'];
     }
     
     function before_filter(){}
