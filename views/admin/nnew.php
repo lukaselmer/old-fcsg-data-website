@@ -7,7 +7,6 @@
             <label for="player[name]">Name</label>
             <input type="text" id="player[name]" name="player[name]" value="" />
         </p>
-
         <p>
             <label for="player[description]">Beschreibung</label>
             <textarea id="player[description]" name="player[description]" rows="8" cols="20"></textarea>

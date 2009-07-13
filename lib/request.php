@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include('controllers/application_controller.php');
 
 $contrller_name = $_GET['controller'] ? $_GET['controller'] : 'players';

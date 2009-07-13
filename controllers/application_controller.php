@@ -4,9 +4,11 @@ class ApplicationController {
     public function __construct() {
         global $DB;
         $this->DB = $DB;
+        $this->before_filter();
     }
     
-    #global $DB;
+    function before_filter(){}
+
     function layout($name = 'base'){
         
     }

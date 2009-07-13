@@ -1,6 +1,12 @@
 <?php
 
 class AdminController extends ApplicationController{
+    function before_filter(){
+        if($_SESSION['authenticated']!=true){
+            redirect_to('users', 'login');
+        }
+    }
+
     function index(){
         $this->players = $this->DB->select("select * from players");
         $this->open_player_id = intval($_REQUEST['open']);

@@ -1,5 +1,21 @@
 <?php
 
+function authenticate($entered_username = '', $entered_password = ''){
+    if($_SESSION['authenticated']){
+        return true;
+    }
+    $users = Array('beat' => 'motocross', 'lukas' => 'motocross');
+    foreach ($users as $username => $password) {
+        if($entered_username == $username && $entered_password == $password){
+            $_SESSION['authenticated'] = true;
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            return true;
+        }
+    }
+    return false;
+}
+
 function link_to($name, $controller, $action = 'index', $url_params=Array(), $html_params=Array(), $print=true){
     $url = url_for($controller, $action, $url_params);
     if(sizeof($html_params) > 0){
