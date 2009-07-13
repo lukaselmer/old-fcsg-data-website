@@ -2,8 +2,7 @@
 
 class PlayersController extends ApplicationController{
     function index(){
-        global $DB;
-        $this->players = $DB->select("select * from players");
+        $this->players = $this->DB->select("select * from players");
     }
 
     function nnew(){
@@ -11,7 +10,7 @@ class PlayersController extends ApplicationController{
     }
 
     function create(){
-
+        $this->DB->select("select * from players");
     }
 
     function edit(){

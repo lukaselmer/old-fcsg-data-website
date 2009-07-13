@@ -1,55 +1,59 @@
 html {
-    font-size: 100.01%
+    font-size:100.01%
 }
 body {
-    margin: 0;
-    font: 12px Verdana, Arial, sans-serif;
-    font-size: 0.75em;
-    background-color: #DFDFDF;
-    background-color: #DFFFEF;
-    background-color: #E0EFE7;
-    background-color: #EFFFF7;
-    background-color: #DFFFE3;
+    margin:0;
+    font:12px Verdana, Arial, sans-serif;
+    font-size:0.75em;
+    background-color:#DFDFDF;
+    background-color:#DFFFEF;
+    background-color:#E0EFE7;
+    background-color:#EFFFF7;
+    background-color:#DFFFE3;
 }
 
+.fl {float:left;}
+.fr {float:right;}
+.clearer {clear:both;}
+
 .base-outer {
-    width: 100%;
-    text-align: center;
+    width:100%;
+    text-align:center;
 }
 
 .base-inner {
-    margin: auto;
-    width: 732px;
-    text-align: left;
+    margin:auto;
+    width:732px;
+    text-align:left;
 }
 
 .header {
-    background-color: #00763B;
-    margin: 6px 0 6px 0;
+    background-color:#00763B;
+    margin:6px 0 6px 0;
 }
 
 .header .inner {
-    padding: 3px;
+    padding:3px;
 }
 
 .footer {
-    margin: 6px 0 6px 0;
-    text-align: right;
-    background-color: #008F46;
-    background-color: #00763B;
+    margin:6px 0 6px 0;
+    text-align:right;
+    background-color:#008F46;
+    background-color:#00763B;
 }
 
 .footer .inner {
-    padding: 0px 6px 0px 6px;
+    padding:0px 6px 0px 6px;
 }
 
 .footer .inner .white {
-    background-color: #FFF;
+    background-color:#FFF;
 }
 
 .footer .inner .white .inner {
-    padding: 5px 10px 0 6px;
-    color: #5F5F5F;
+    padding:5px 10px 0 6px;
+    color:#5F5F5F;
 }
 
 
@@ -58,23 +62,23 @@ body {
 
 
 .players {
-    background-color: #008F46;
-    background-color: #00763B;
+    background-color:#008F46;
+    background-color:#00763B;
 }
 .players .inner {
-    padding: 0px 6px 1px 6px;
+    padding:0px 6px 1px 6px;
 }
 
 .player {
-    background-color: #FFF;
-    color: #00763B;
+    background-color:#FFF;
+    color:#00763B;
 }
 .player .inner .name {
-    cursor: pointer;
+    cursor:pointer;
 }
 .player .inner .description {
-    padding: 8px 0;
+    padding:8px 0;
 }
 .player .inner {
-    padding: 0px 6px 0px 6px;
+    padding:0px 6px 0px 6px;
 }

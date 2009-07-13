@@ -26,7 +26,7 @@
             <div class="base-inner">
                 <div class="header rounded">
                     <div class="inner">
-                        <? echo image_tag('logo.png'); ?>
+                        <? image_tag('logo.png'); ?>
                     </div>
                 </div>
 

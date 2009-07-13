@@ -11,6 +11,18 @@ class DbClass{
         return $objects;
     }
 
+    function insert($query){
+        mysql_query($query);
+        return mysql_insert_id();
+    }
+
+    function update($query){
+        mysql_query($query);
+    }
+
+    function delete($query){
+        mysql_query($query);
+    }
 }
 
 $DB = new DbClass();
