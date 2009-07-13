@@ -3,6 +3,7 @@
 class AdminController extends ApplicationController{
     function index(){
         $this->players = $this->DB->select("select * from players");
+        $this->open_player_id = intval($_REQUEST['open']);
     }
 
     function nnew(){
@@ -14,7 +15,7 @@ class AdminController extends ApplicationController{
         foreach ($player_params as $i => $param) {
             $player_params[$i] = str_replace('"', '&quot;', $param);
         }
-        $this->DB->insert("INSERT INTO `players` (
+        $inserted_id = $this->DB->insert("INSERT INTO `players` (
 `name` ,
 `description`
 )
@@ -22,7 +23,7 @@ VALUES (
 \"".$player_params['name']."\",
 \"".$player_params['description']."\"
 );");
-        redirect_to('admin', 'index');
+        redirect_to('admin', 'index', Array('open' => $inserted_id));
     }
 
     function edit(){

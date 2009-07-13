@@ -18,6 +18,7 @@ img {border:0;}
 .clearer {clear:both;}
 label { cursor:pointer; }
 a {color:#00763B;}
+p {margin: 8px 0 8px 0;}
 
 .base-outer {
     width:100%;
@@ -100,7 +101,8 @@ a {color:#00763B;}
     cursor:pointer;
 }
 .player .inner .description {
-    /*padding:8px 0;*/
+    /*padding:6px 0;*/
+    width: 700px;
 }
 .player .inner {
     padding:0px 6px 0px 6px;

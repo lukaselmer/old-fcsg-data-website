@@ -1,6 +1,4 @@
 
-
-
 <div class="players rounded">
     <div class="inner">
         <? foreach ($players as $player) { ?>
@@ -8,11 +6,15 @@
         <div class="player rounded" id="player_<? echo $player->id; ?>">
             <div class="inner">
                 <div class="name">
-                    <div class="fr"><? link_to('bearbeiten', 'admin', 'edit', Array(Array('id', $player->id))); ?> <? link_to('löschen', 'admin', 'destroy', Array(Array('id', $player->id))); ?></div>
                     <div class="fl" onclick="toggle_player_description(<? echo $player->id; ?>);"><b><? echo $player->name; ?></b></div>
+                    <div class="fr"><? link_to('bearbeiten', 'admin', 'edit', Array(Array('id', $player->id))); ?> 
+                    <? link_to('löschen', 'admin', 'destroy', Array('id' => $player->id), Array('onclick' => "return confirm('Wirklich löschen?');")); ?></div>
                     <? clearer(); ?>
                 </div>
-                <div class="description" style="display:none;"><? echo htmlspecialchars_decode($player->description); ?></div>
+                <div class="description" style="<? echo $open_player_id == $player->id ? '' : 'display:none;' ?>">
+                    <? echo htmlspecialchars_decode($player->description); ?>
+                </div>
+
             </div>
         </div>
         <? } ?>
@@ -27,4 +29,3 @@
 
     </div>
 </div>
-
