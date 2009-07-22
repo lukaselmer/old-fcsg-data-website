@@ -6,7 +6,8 @@ $cfg = Array(
         'username' => 'root',
         'password' => '',
         'database' => 'fcsg-data'
-    )
+    ),
+    'env' => 'production',
 
 );
 

@@ -2,6 +2,15 @@
 
 session_start();
 
+
+function include_all_once ($pattern) {
+    foreach (glob($pattern) as $file) { // remember the { and } are necessary!
+        include $file;
+    }
+}
+
+include_all_once('models/*.php');
+
 include('controllers/application_controller.php');
 
 $contrller_name = $_GET['controller'] ? $_GET['controller'] : 'players';

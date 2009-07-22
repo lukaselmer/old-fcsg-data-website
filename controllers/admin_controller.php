@@ -8,7 +8,7 @@ class AdminController extends ApplicationController{
     }
 
     function index(){
-        $this->players = $this->DB->select("select * from players");
+        $this->players = $this->DB->select("select * from players order by position ASC");
         $this->open_player_id = intval($_REQUEST['open']);
     }
 
@@ -23,17 +23,40 @@ class AdminController extends ApplicationController{
         }
         $inserted_id = $this->DB->insert("INSERT INTO `players` (
 `name` ,
-`description`
+`description`,
+`position`
 )
 VALUES (
 \"".$player_params['name']."\",
-\"".$player_params['description']."\"
+\"".$player_params['description']."\",
+\"".Player::next_position()."\"
 );");
         redirect_to('admin', 'index', Array('open' => $inserted_id));
     }
 
     function edit(){
-        $this->player = $this->DB->select_first("select * from players where id = ".intval($_REQUEST['id']));
+        $this->player = $this->DB->select_by_id("players", $_REQUEST['id']);
+    }
+
+    function move_up(){
+        $this->player = $this->DB->select_by_id("players", $_REQUEST['id']);
+        $this->player_on_top = $this->DB->select_first("select * from players where `position` < \"".($this->player->position)."\" order by `position` DESC LIMIT 1");
+        $this->switch_positions($this->player_on_top, $this->player);
+        redirect_to('admin');
+    }
+
+    function move_down(){
+        $this->player = $this->DB->select_by_id("players", $_REQUEST['id']);
+        $this->player_on_top = $this->DB->select_first("select * from players where `position` > \"".($this->player->position)."\" order by `position` ASC LIMIT 1");
+        $this->switch_positions($this->player_on_top, $this->player);
+        redirect_to('admin');
+    }
+
+    function switch_positions($p1, $p2){
+        if($p1->id && $p2->id){
+            $this->DB->update("UPDATE `players` SET `position` = \"".($p1->position)."\" WHERE `id` = ".$p2->id.";");
+            $this->DB->update("UPDATE `players` SET `position` = \"".($p2->position)."\" WHERE `id` = ".$p1->id.";");
+        }
     }
 
     function update(){

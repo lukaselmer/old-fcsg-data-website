@@ -17,8 +17,10 @@ if($_REQUEST['confirm'] != "1"){
     exit;
 }
 
-echo "Funktion durch Admin deaktiviert. Sorry!";
-exit;
+if($cfg['env'] != 'development'){
+    echo "Funktion durch Admin deaktiviert. Sorry!";
+    exit;
+}
 $str = trim(file_get_contents('reset.sql'));
 $str = str_replace("#{DB_NAME}", $cfg['mysql']['database'], $str);
 $file_content = split(";", $str);
