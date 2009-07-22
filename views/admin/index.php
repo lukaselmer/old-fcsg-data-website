@@ -22,7 +22,7 @@
                         &nbsp;
                     </div>
                     <div class="fl" onclick="toggle_player_description(<? echo $player->id; ?>);">
-                        <b><? echo $player->name; ?></b> <? echo $player->position; ?>
+                        <b><? echo $player->name; ?></b>
                     </div>
                     <div class="fr"><? link_to('bearbeiten', 'admin', 'edit', Array(Array('id', $player->id))); ?>
                     <? link_to('löschen', 'admin', 'destroy', Array('id' => $player->id), Array('onclick' => "return confirm('Wirklich löschen?');")); ?></div>
