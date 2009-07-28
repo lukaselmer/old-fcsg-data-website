@@ -31,6 +31,7 @@
                         <div class="navi fr">
                             <ul>
                                 <li><? link_to('Übersicht', 'players') ?></li>
+                                <li><? link_to('Kontakt', 'home', 'contact') ?></li>
                                 <li><? link_to('Administration', 'admin') ?></li>
                                 <? if($authenticated){ ?><li><? link_to('Logout', 'users', 'logout') ?></li><? } ?>
                             </ul>
