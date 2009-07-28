@@ -36,7 +36,6 @@
                             | Nationalität: <?php echo $player->nationality ?>
                             <? } ?>
                         </i>
-
                     </p>
                     <? echo htmlspecialchars_decode($player->description); ?>
                 </div>

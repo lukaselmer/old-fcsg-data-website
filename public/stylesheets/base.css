@@ -122,3 +122,6 @@ label {
 .player .inner {
     padding:0px 6px 0px 6px;
 }
+.player-index {
+    text-align:center;
+}
