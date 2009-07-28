@@ -87,6 +87,24 @@ WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
         $this->DB->delete("DELETE FROM `players` WHERE `id` = ".intval($player_id)." LIMIT 1;");
         redirect_to('admin');
     }
+
+
+    function edit_startpage_content(){
+        $this->cms_content = $this->DB->select_by_attribute("cms_content", "cms_key", "startpage");
+    }
+
+    function update_startpage_content(){
+        $params = $_REQUEST['cms_content'];
+        foreach ($params as $i => $param) {
+            $params[$i] = str_replace('"', '&quot;', $param);
+        }
+        $this->cms_content = $this->DB->select_by_attribute("cms_content", "cms_key", "startpage");
+        $this->DB->query("UPDATE `cms_content` SET
+`content` = \"".$params['content']."\"
+WHERE `id` = ".$this->cms_content->id." LIMIT 1 ;
+");
+        redirect_to('admin');
+    }
 }
 
 ?>

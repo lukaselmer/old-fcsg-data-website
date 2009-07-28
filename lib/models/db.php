@@ -17,7 +17,7 @@ class DbClass{
     }
 
     function select_by_attribute($table, $attribute, $value){
-        return $this->select_first("select * from $table where $attribute = ".$value);
+        return $this->select_first("select * from $table where $attribute = \"".$value."\"");
     }
 
     function select_by_id($table, $id){

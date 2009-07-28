@@ -12,6 +12,7 @@ class PlayersController extends ApplicationController{
                 $this->anchor_letters[] = $player_start_letter;
             }
         }
+        $this->startpage_content = $this->DB->select_by_attribute("cms_content", "cms_key", "startpage");
     }
 }
 

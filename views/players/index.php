@@ -1,6 +1,8 @@
 
 <div class="players rounded">
     <div class="inner">
+        <? include "_startpage_content.php"; ?>
+
         <? include "_player_index.php"; ?>
 
         <? $startchar = ''; //startchar is needed for the alphabethic grouping ?>

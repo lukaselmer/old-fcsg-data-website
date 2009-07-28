@@ -27,3 +27,18 @@ INSERT INTO `players` (`date_of_birth`, `nationality`, `first_name`, `last_name`
 ('15. Mai 1981', 'Deutschland', 'Feugiat', 'Ocurreret', '<p>Méi et wuel alles kommen, engem grouss blénken dee as. Gét fu wait brét prächteg, ons Kaffi d''Kanner vu. Ké vill bessert vun, dem ménger Hämmel um, sech d''Beem gebotzt et bei. Spilt soubal Feierwon wat hu, drem d''Mier nozegon am wéi, mat geet Bänk dämpen un.</p>', 6),
 ('15. Mai 1981', '', 'Consulatu', 'Splendide', '<p>Méi et wuel alles kommen, engem grouss blénken dee as. Gét fu wait brét prächteg, ons Kaffi d''Kanner vu. Ké vill bessert vun, dem ménger Hämmel um, sech d''Beem gebotzt et bei. Spilt soubal Feierwon wat hu, drem d''Mier nozegon am wéi, mat geet Bänk dämpen un.</p>', 7),
 ('15. Mai 1981', '', 'Dicam', 'Graece', '<p>Méi et wuel alles kommen, engem grouss blénken dee as. Gét fu wait brét prächteg, ons Kaffi d''Kanner vu. Ké vill bessert vun, dem ménger Hämmel um, sech d''Beem gebotzt et bei. Spilt soubal Feierwon wat hu, drem d''Mier nozegon am wéi, mat geet Bänk dämpen un.</p>', 8);
+
+
+DROP TABLE IF EXISTS `cms_content`;
+CREATE TABLE IF NOT EXISTS `cms_content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `cms_key` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+INSERT INTO `cms_content` (`title`, `cms_key`, `content`) VALUES
+('Startseite', 'startpage', '<p>Willkommen bei FCSG-Data!</p>');
+
+
