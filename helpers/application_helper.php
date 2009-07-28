@@ -1,5 +1,13 @@
 <?php
 
+function valid_email($email) {
+    if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)){
+        //list($username,$domain)=split('@',$email);
+        return true;
+    }
+    return false;
+}
+    
 function authenticate($entered_username = '', $entered_password = ''){
     if($_SESSION['authenticated']){
         return true;
