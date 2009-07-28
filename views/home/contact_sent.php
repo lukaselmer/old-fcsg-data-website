@@ -1,1 +1,1 @@
-<p>Besten Dank für die Nachricht.</p>
+<p>Besten Dank für Ihre Nachricht.</p>

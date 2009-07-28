@@ -10,11 +10,13 @@ class HomeController extends ApplicationController{
             //check form imput
             if(strlen($name) >= 4 && strlen($subject) >= 4 && strlen($message) >= 10 && valid_email($email)){
                 $email_body = "Name: $name\n
-                Email: $email\n
-                Betreff: $subject\n
-                Nachricht: $message";
+Email: $email\n
+Betreff: $subject\n
+Nachricht: $message\n
+Datum: ".date("d.m.Y H:i")."\n
+";
                 try {
-                    if(!@mail('lukas.elmer@gmail.com, xxxbeathaueter@bluewin.ch', "Kontaktformular FCSG-Data", $email_body)){
+                    if(!@mail('lukas.elmer@gmail.com', "Kontaktformular FCSG-Data", $email_body)){
                         redirect_to('home', 'send_error');
                     }
                 } catch (Exception $e) {
