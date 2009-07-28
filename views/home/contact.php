@@ -1,5 +1,6 @@
+
 <h1>
-    Kontaktformular
+    Kontakt
 </h1>
 
 <? if($error){
@@ -25,15 +26,15 @@
             <td><textarea cols="40" rows="10" name="message"><? echo $_REQUEST['message']; ?></textarea></td>
         </tr>
         <!--<tr>
-            <?
-            //$num1 = rand(1, 4);
-            //$num2 = rand(1, 4);
-            ?>
-            <td>Was gibt <? echo $num1; ?> + <? echo $num2; ?> ?:<br></td>
-            <td>
-                <input type="hidden" name="solution" value="<?echo $num1 + $num2; ?>" />
-                <input type="text" name="question" value="" />
-            </td>
+<?
+//$num1 = rand(1, 4);
+//$num2 = rand(1, 4);
+?>
+<td>Was gibt <? echo $num1; ?> + <? echo $num2; ?> ?:<br></td>
+<td>
+<input type="hidden" name="solution" value="<?echo $num1 + $num2; ?>" />
+<input type="text" name="question" value="" />
+</td>
         </tr>-->
         <tr>
             <td></td>
@@ -43,4 +44,4 @@
         </tr>
     </table>
     <input type="hidden" name="send" value="1" />
-</form> 
+</form>

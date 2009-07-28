@@ -1,6 +1,10 @@
 <?php
 
-class HomeController extends ApplicationController{
+class HomeController extends ApplicationController {
+    public function __construct() {
+        $this->layout = 'content_base.php';
+        parent::__construct();
+    }
     function contact(){
         if($_REQUEST['send'] == 1){ //If form filled out...
             $name = $_REQUEST['name'];
@@ -13,10 +17,10 @@ class HomeController extends ApplicationController{
 Email: $email\n
 Betreff: $subject\n
 Nachricht: $message\n
-Datum: ".date("d.m.Y H:i")."\n
+Datum / Zeit: ".date("d.m.Y H:i")."\n
 ";
                 try {
-                    if(!@mail('lukas.elmer@gmail.com', "Kontaktformular FCSG-Data", $email_body)){
+                    if(!@mail('lukas.elmer@gmail.com, beathaueter@bluewin.ch', "Kontaktformular FCSG-Data", $email_body)){
                         redirect_to('home', 'send_error');
                     }
                 } catch (Exception $e) {
