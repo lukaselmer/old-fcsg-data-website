@@ -2,7 +2,7 @@
 <div style="height: 4px; width: 10px;"></div>
 <div class="player rounded">
     <div class="inner">
-        <? echo $startpage_content->content; ?>
+        <? echo htmlspecialchars_decode($startpage_content->content); ?>
     </div>
 </div>
 <? } ?>
