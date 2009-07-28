@@ -8,7 +8,8 @@ class AdminController extends ApplicationController{
     }
 
     function index(){
-        $this->players = $this->DB->select("select * from players order by position ASC");
+        //$this->players = $this->DB->select("select * from players order by position ASC");
+        $this->players = $this->DB->select("select * from players order by last_name ASC");
         $this->open_player_id = intval($_REQUEST['open']);
     }
 
@@ -22,13 +23,19 @@ class AdminController extends ApplicationController{
             $player_params[$i] = str_replace('"', '&quot;', $param);
         }
         $inserted_id = $this->DB->insert("INSERT INTO `players` (
-`name` ,
-`description`,
+`first_name` ,
+`last_name` ,
+`description` ,
+`nationality`,
+`date_of_birth`,
 `position`
 )
 VALUES (
-\"".$player_params['name']."\",
+\"".$player_params['first_name']."\",
+\"".$player_params['last_name']."\",
 \"".$player_params['description']."\",
+\"".$player_params['nationality']."\",
+\"".$player_params['date_of_birth']."\",
 \"".Player::next_position()."\"
 );");
         redirect_to('admin', 'index', Array('open' => $inserted_id));
@@ -54,8 +61,8 @@ VALUES (
 
     function switch_positions($p1, $p2){
         if($p1->id && $p2->id){
-            $this->DB->update("UPDATE `players` SET `position` = \"".($p1->position)."\" WHERE `id` = ".$p2->id.";");
-            $this->DB->update("UPDATE `players` SET `position` = \"".($p2->position)."\" WHERE `id` = ".$p1->id.";");
+            $this->DB->query("UPDATE `players` SET `position` = \"".($p1->position)."\" WHERE `id` = ".$p2->id.";");
+            $this->DB->query("UPDATE `players` SET `position` = \"".($p2->position)."\" WHERE `id` = ".$p1->id.";");
         }
     }
 
@@ -64,9 +71,12 @@ VALUES (
         foreach ($player_params as $i => $param) {
             $player_params[$i] = str_replace('"', '&quot;', $param);
         }
-        $this->DB->update("UPDATE `players` SET
-`name` = \"".$player_params['name']."\",
-`description` = \"".$player_params['description']."\"
+        $this->DB->query("UPDATE `players` SET
+`first_name` = \"".$player_params['first_name']."\",
+`last_name` = \"".$player_params['last_name']."\",
+`description` = \"".$player_params['description']."\",
+`nationality` = \"".$player_params['nationality']."\",
+`date_of_birth` = \"".$player_params['date_of_birth']."\"
 WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
 ");
         redirect_to('admin');

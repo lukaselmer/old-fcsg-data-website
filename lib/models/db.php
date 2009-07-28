@@ -40,6 +40,10 @@ class DbClass{
         mysql_query($query);
     }
 
+    function query($query){
+        mysql_query($query);
+    }
+
     function delete($query){
         mysql_query($query);
     }
