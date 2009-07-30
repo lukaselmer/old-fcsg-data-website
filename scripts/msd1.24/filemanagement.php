@@ -306,8 +306,6 @@ $autodel.='</p>';
 switch ($action)
 {
 	case 'dump':
-        echo "AAAAAAAAAAAAAAAAAA";
-        exit;
 		//Variablen
 		if ($config['multi_dump'] == 0) DBDetailInfo($databases['db_selected_index']);
 		$cext=( $config['cron_extender'] == 0 ) ? "pl" : "cgi";
@@ -323,7 +321,7 @@ switch ($action)
 		$confabsolute=$config['config_file'];
 		$scriptref=getServerProtocol() . $_SERVER['SERVER_NAME'] . $refdir . $config['cron_execution_path'] . 'crondump.' . $cext . "?config=" . $confabsolute;
 		$cronref="perl " . $cronabsolute . " -config=" . $confabsolute . " -html_output=0";
-		
+
 		//Ausgabe
 		echo headline($lang['fm_dump_header'] . ' <span class="small">("' . $lang['config_headline'] . ': ' . $config['config_file'] . '")</span>');
 		if (!is_writable($config['paths']['backup'])) die('<span class="error">' . sprintf($lang['wrong_rights'],'work/backup','777') . '</span>');
@@ -390,7 +388,7 @@ switch ($action)
 		{
 			echo '<tr><td>' . $lang['multi_part_groesse'] . ':</td><td><strong>' . byte_output($config['multipart_groesse']) . '</strong></td></tr>';
 		}
-		
+
 		if ($config['send_mail'] == 1)
 		{
 			$t=$config['email_recipient'] . ( ( $config['send_mail_dump'] == 1 ) ? $lang['withattach'] : $lang['withoutattach'] );

@@ -1,5 +1,6 @@
 <?php
 include("general_security.php");
+$_GET['config'] = 'mysqldumper';
 if (!@ob_start("ob_gzhandler")) @ob_start();
 session_name('MySQLDumper');
 session_start();
@@ -46,6 +47,7 @@ $pageheader=MSDHeader();
 $DumpFertig=0;
 $relativ_path='./';
 $flipped=array_flip($databases['Name']);
+//http://local.fcsg-data.ch/scripts/msd1.24/dump.php?config=mysqldumper
 
 if (isset($_SESSION['dump']) && !isset($_GET['config']))
 {
