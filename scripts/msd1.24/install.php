@@ -1,5 +1,5 @@
 <?php
-include("general_security.php");
+//include("general_security.php");
 if (!@ob_start("ob_gzhandler")) @ob_start();
 $install_ftp_server=$install_ftp_user_name=$install_ftp_user_pass=$install_ftp_path="";
 
@@ -327,7 +327,7 @@ switch ($phase)
 			if (!fclose($fp)) $ret=false;
 			@chmod("config.php",0777);
 		}
-		if (!$ret || true)
+		if (!$ret)
 		{
 			echo '<p class="warnung">' . $lang['config_save_error'] . '</p>';
 		}
