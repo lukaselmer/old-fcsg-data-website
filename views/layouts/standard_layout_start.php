@@ -35,9 +35,10 @@
                 <li><? link_to('Administration', 'admin') ?></li>
 
                 <? if($authenticated){ ?>
-                <li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
-                <li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
-                <li><? link_to('Logout', 'users', 'logout') ?></li>
+                    <li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
+                    <li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
+                    <li><a href="/scripts/msd1.24/dump.php">Sicherung anlegen</a></li>
+                    <li><? link_to('Logout', 'users', 'logout') ?></li>
                 <? } ?>
             </ul>
         </div>
