@@ -11,7 +11,7 @@ body {
     background-color:#EFFFF7;
     background-color:#DFFFE3;
 }
-
+div {margin:0; padding: 0;}
 img {border:0; margin:0; padding: 0;}
 .fl {float:left;}
 .fr {float:right;}
