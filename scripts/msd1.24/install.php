@@ -325,7 +325,7 @@ switch ($phase)
 		{
 			if (!fwrite($fp,implode($tmp,""))) $ret=false;
 			if (!fclose($fp)) $ret=false;
-			@chmod("config.php",0644);
+			@chmod("config.php",0777);
 		}
 		if (!$ret)
 		{
@@ -348,7 +348,7 @@ switch ($phase)
 		}
 		
 		break;
-	
+        exit;
 	case 3: //
 		if (ini_get('safe_mode') == 1) $nextphase=10;
 		else $nextphase=$phase + 1;
