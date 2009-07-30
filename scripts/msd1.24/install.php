@@ -5,9 +5,9 @@ $install_ftp_server=$install_ftp_user_name=$install_ftp_user_pass=$install_ftp_p
 $dbhost=$dbuser=$dbpass=$dbport=$dbsocket=$manual_db='';
 
 function set_get_var_if_empty($get_var, $value){
-    if(!isset($_GET[$get_var])){
+    //if(!isset($_GET[$get_var])){
         $_GET[$get_var] = $value;
-    }
+    //}
 }
 
 set_get_var_if_empty('dbhost', $cfg['mysql']['host']);
