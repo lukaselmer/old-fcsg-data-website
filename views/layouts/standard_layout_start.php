@@ -27,10 +27,10 @@
 <div class="base-inner">
 <div class="header rounded">
     <div class="inner">
-        <div class="fl">
-            <a href="/" style="border:0;"><? image_tag('logo.png'); ?></a>
+        <div class="fl"><a href="/" style="border:0;"><? image_tag('logo.png'); ?></a></div>
+        <div class="fl" style="margin: -9px 0 0 0; z-index: 100;">
+            <div style="position:absolute;"><? image_tag('fcsg-bg-top.png'); ?></div>
         </div>
-        <div class="fl" style="margin: -9px 0 -9px 0;"><? image_tag('fcsg-bg-top.png'); ?></div>
         <div class="navi fr">
             <ul>
                 <li><? link_to('Übersicht', 'players') ?></li>
