@@ -26,7 +26,7 @@
                         <? echo $player->first_name; ?> <b><? echo $player->last_name; ?></b>
                     </a>
                 </div>
-                <div class="description" style="<? echo $open_player_id == $player->id ? '' : 'display:none;' ?>">
+                <div class="description" style="<? echo $open_player_id == $player->id || $open_all ? '' : 'display:none;' ?>">
                     <p>
                         <i>
                             * <? echo $player->date_of_birth; ?>
