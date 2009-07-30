@@ -3,6 +3,17 @@ include("general_security.php");
 if (!@ob_start("ob_gzhandler")) @ob_start();
 $install_ftp_server=$install_ftp_user_name=$install_ftp_user_pass=$install_ftp_path="";
 $dbhost=$dbuser=$dbpass=$dbport=$dbsocket=$manual_db='';
+
+function set_get_var_if_empty($get_var, $value){
+    if(!isset($_GET[$get_var])){
+        $_GET[$get_var] = $value;
+    }
+}
+
+set_get_var_if_empty('dbhost', $cfg['mysql']['host']);
+set_get_var_if_empty('dbuser', $cfg['mysql']['username']);
+set_get_var_if_empty('dbpass', $cfg['mysql']['password']);
+
 foreach ($_GET as $getvar=>$getval)
 {
 	${$getvar}=$getval;
