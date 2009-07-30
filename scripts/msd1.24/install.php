@@ -343,12 +343,11 @@ switch ($phase)
 			echo '<p>&nbsp;</p>';
 			echo '<form action="install.php?language=' . $language . '&phase=' . $nextphase . '" method="post" name="continue"><input type="hidden" name="connstr" value="' . $connstr . '"><input class="Formbutton" style="width:360px;" type="submit" name="continue2" value=" ' . $lang['install_step2_1'] . ' "></form>';
 			echo '<script language="javascript">';
-			echo 'document.forms["continue"].submit();';
+			//echo 'document.forms["continue"].submit();';
 			echo '</script>';
 		}
 		
 		break;
-        exit;
 	case 3: //
 		if (ini_get('safe_mode') == 1) $nextphase=10;
 		else $nextphase=$phase + 1;
