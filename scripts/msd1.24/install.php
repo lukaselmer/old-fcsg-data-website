@@ -226,7 +226,11 @@ switch ($phase)
 					if ($stored == 6) break;
 				}
 			}
-			
+
+            $config['dbhost']=$dbhost = $cfg['mysql']['host'];
+            $config['dbuser']=$dbuser = $cfg['mysql']['username'];
+            $config['dbpass']=$dbpass = $cfg['mysql']['password'];
+
 			if (!isset($config['dbport'])) $config['dbport']="";
 			if (!isset($config['dbsocket'])) $config['dbsocket']="";
 			
