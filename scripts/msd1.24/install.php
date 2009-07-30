@@ -5,9 +5,9 @@ $install_ftp_server=$install_ftp_user_name=$install_ftp_user_pass=$install_ftp_p
 
 $dbhost=$dbuser=$dbpass=$dbport=$dbsocket=$manual_db='';
 
-$dbhost = $cfg['mysql']['host'];
-$dbuser = $cfg['mysql']['username'];
-$dbpass = $cfg['mysql']['password'];
+$_POST['dbhost']=$dbhost = $cfg['mysql']['host'];
+$_POST['dbuser']=$dbuser = $cfg['mysql']['username'];
+$_POST['dbpass']=$dbpass = $cfg['mysql']['password'];
 
 foreach ($_GET as $getvar=>$getval)
 {
