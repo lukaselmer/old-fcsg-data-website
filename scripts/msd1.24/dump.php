@@ -40,7 +40,6 @@ if (isset($_GET['config']))
 		die("Hacking attempt or configuration not found!");
 }
 $config=$_SESSION['config'];
-$config['multi_dump'] = 1;
 include_once ( './' . $config['files']['parameter'] );
 include_once ( './inc/mysql.php' );
 include_once ( './language/' . $config['language'] . '/lang.php' );
