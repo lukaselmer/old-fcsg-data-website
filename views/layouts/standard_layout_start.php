@@ -27,7 +27,10 @@
 <div class="base-inner">
 <div class="header rounded">
     <div class="inner">
-        <div class="fl"><a href="/" style="border:0;"><? image_tag('logo.png'); ?></a></div>
+        <div class="fl">
+            <a href="/" style="border:0;"><? image_tag('logo.png'); ?></a>
+        </div>
+        <div class="fl" style="margin: -9px 0 -9px 0;"><? image_tag('fcsg-bg-top.png'); ?></div>
         <div class="navi fr">
             <ul>
                 <li><? link_to('Übersicht', 'players') ?></li>
@@ -35,10 +38,10 @@
                 <li><? link_to('Administration', 'admin') ?></li>
 
                 <? if($authenticated){ ?>
-                    <li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
-                    <li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
-                    <li><a href="/scripts/msd1.24/dump.php">Sicherung anlegen</a></li>
-                    <li><? link_to('Logout', 'users', 'logout') ?></li>
+                <li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
+                <li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
+                <li><a href="/scripts/msd1.24/dump.php">Sicherung anlegen</a></li>
+                <li><? link_to('Logout', 'users', 'logout') ?></li>
                 <? } ?>
             </ul>
         </div>
