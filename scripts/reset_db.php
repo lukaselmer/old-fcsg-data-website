@@ -1,16 +1,6 @@
 <?php
 
-
-include('../config.php');
-include('../lib/load.php');
-include('../lib/connect_db.php');
-
-
-include('../helpers/application_helper.php');
-session_start();
-if(!authenticate()){
-    redirect_to('users', 'login');
-}
+include('general.php');
 
 if($_REQUEST['confirm'] != "1"){
     echo "<a href='/scripts/reset_db.php?confirm=1'>Hiermit wird die ganze Datenbank zurückgesetzt. Alle Spieler werden gelöscht! Fortfahren?</a>";
