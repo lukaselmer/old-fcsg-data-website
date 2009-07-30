@@ -7,7 +7,7 @@ function valid_email($email) {
     }
     return false;
 }
-    
+
 function authenticate($entered_username = '', $entered_password = ''){
     if($_SESSION['authenticated']){
         return true;
