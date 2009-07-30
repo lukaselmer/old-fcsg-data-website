@@ -1,4 +1,5 @@
 <?php
+include("general_security.php");
 if (!@ob_start("ob_gzhandler")) @ob_start();
 function print_save_button()
 {

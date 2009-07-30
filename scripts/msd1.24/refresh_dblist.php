@@ -1,4 +1,5 @@
 <?php
+include("general_security.php");
 // Konfigurationsdateien, die aktualisiert werden sollen
 // configurations to update
 // mehrere Dateien so angeben | enter more than one configurationsfile like this

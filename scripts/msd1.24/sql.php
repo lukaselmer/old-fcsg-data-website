@@ -1,4 +1,5 @@
 <?php
+include("general_security.php");
 if (!@ob_start("ob_gzhandler")) @ob_start();
 $download=( isset($_POST['f_export_submit']) && ( isset($_POST['f_export_sendresult']) && $_POST['f_export_sendresult'] == 1 ) );
 include ( './inc/header.php' );

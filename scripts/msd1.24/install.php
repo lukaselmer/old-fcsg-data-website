@@ -1,4 +1,5 @@
 <?php
+include("general_security.php");
 if (!@ob_start("ob_gzhandler")) @ob_start();
 $install_ftp_server=$install_ftp_user_name=$install_ftp_user_pass=$install_ftp_path="";
 $dbhost=$dbuser=$dbpass=$dbport=$dbsocket=$manual_db='';

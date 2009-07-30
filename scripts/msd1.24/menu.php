@@ -1,4 +1,5 @@
 <?php
+include("general_security.php");
 if(!@ob_start("ob_gzhandler")) @ob_start();
 include_once ( './inc/header.php' );
 $lang_old=$config['language'];
