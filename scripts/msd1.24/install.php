@@ -20,7 +20,7 @@ foreach ($_POST as $postvar=>$postval)
 include_once ( './inc/functions.php' );
 include_once ( './inc/mysql.php' );
 include_once ( './inc/runtime.php' );
-if (!isset($language)) $language="en";
+if (!isset($language)) $language="de_du";
 
 $config['language']=$language;
 include ( './language/lang_list.php' );
@@ -43,9 +43,14 @@ else
 	if (isset($connstr) && !empty($connstr))
 	{
 		$p=explode("|",$connstr);
-		$dbhost=$config['dbhost']=$p[0];
+		/*$dbhost=$config['dbhost']=$p[0];
 		$dbuser=$config['dbuser']=$p[1];
-		$dbpass=$config['dbpass']=$p[2];
+		$dbpass=$config['dbpass']=$p[2];*/
+
+        $_POST['dbhost']=$dbhost = $cfg['mysql']['host'];
+        $_POST['dbuser']=$dbuser = $cfg['mysql']['username'];
+        $_POST['dbpass']=$dbpass = $cfg['mysql']['password'];
+
 		$dbport=$config['dbport']=$p[3];
 		$dbsocket=$config['dbsocket']=$p[4];
 		$manual_db=$config['manual_db']=$p[5];
