@@ -306,6 +306,8 @@ $autodel.='</p>';
 switch ($action)
 {
 	case 'dump':
+        echo "AAAAAAAAAAAAAAAAAA";
+        exit;
 		//Variablen
 		if ($config['multi_dump'] == 0) DBDetailInfo($databases['db_selected_index']);
 		$cext=( $config['cron_extender'] == 0 ) ? "pl" : "cgi";
