@@ -1,4 +1,20 @@
 <?php
+
+
+
+include('../../config.php');
+include('../../lib/load.php');
+include('../../lib/connect_db.php');
+
+include('../../helpers/application_helper.php');
+session_start();
+if(!authenticate()){
+    redirect_to('users', 'login');
+}
+
+
+
+
 if (!@ob_start("ob_gzhandler")) @ob_start();
 include ( './inc/functions.php' );
 $page=( isset($_GET['page']) ) ? $_GET['page'] : 'main.php';

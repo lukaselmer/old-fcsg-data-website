@@ -1,0 +1,4 @@
+AuthName "MySQLDumper"
+AuthType Basic
+AuthUserFile "C:/instantrails20/php_apps/fcsg-data/scripts/msd1.24/.htpasswd"
+require valid-user

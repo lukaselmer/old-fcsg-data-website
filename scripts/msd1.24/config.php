@@ -3,7 +3,6 @@
 // MySQL Dumper Configuration
 //////////////////////////////////////////////////////////
 
-
 // The Connection-Data for MySQL
 // Host-Adress, default 'localhost'
 $config['dbhost'] = 'localhost';
@@ -20,7 +19,7 @@ $config['dbpass'] = '';
 //Speed Values between 50 and 1000000
 //use low values if you have bad connection or slow machines
 $config['minspeed']=100;
-$config['maxspeed']=5000;
+$config['maxspeed']=10000;
 
 // Your Interface language. Use 'de' for german, 'en' for english
 $config['language']="de";
