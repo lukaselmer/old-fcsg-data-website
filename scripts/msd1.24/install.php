@@ -327,7 +327,7 @@ switch ($phase)
 			if (!fclose($fp)) $ret=false;
 			@chmod("config.php",0777);
 		}
-		if (!$ret)
+		if (!$ret || true)
 		{
 			echo '<p class="warnung">' . $lang['config_save_error'] . '</p>';
 		}
