@@ -3,15 +3,19 @@
     <div class="inner">
         <div style="position:absolute; width:703px;">
             <div class="fl">
-                <a href="<? echo url_for('players', 'index', Array('open_all' => 1)) ?>" onclick="show_all_player_descriptions(); return false;" style="text-decoration:none;">
-                    <em>Details einblenden</em>
-                </a>
+                <div style="position:absolute; z-index:200;">
+                    <a href="<? echo url_for('players', 'index', Array('open_all' => 1)) ?>" onclick="show_all_player_descriptions(); return false;" style="text-decoration:none;">
+                        <em>Details einblenden</em>
+                    </a>
+                </div>
             </div>
 
-            <div class="fr">
-                <a href="<? echo url_for('players', 'index') ?>" onclick="hide_all_player_descriptions(); return false;" style="text-decoration:none;">
-                    <em>Details ausblenden</em>
-                </a>
+            <div class="fr" style="width: 112px;">
+                <div style="position:absolute; z-index:200; width: 120px;">
+                    <a href="<? echo url_for('players', 'index') ?>" onclick="hide_all_player_descriptions(); return false;" style="text-decoration:none;">
+                        <em>Details ausblenden</em>
+                    </a>
+                </div>
             </div>
             <? clearer(); ?>
         </div>
