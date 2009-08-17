@@ -14,7 +14,7 @@ foreach ($csv_exports as $table => $rows) {
         fputcsv($fp, $row);
     }
     fclose($fp);
-    chmod($backup_file, 777);
+    chmod($backup_file, 0777);
 }
 
 ?>
