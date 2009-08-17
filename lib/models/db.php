@@ -37,15 +37,15 @@ class DbClass{
     }
 
     function update($query){
-        mysql_query($query);
+        return mysql_query($query);
     }
 
     function query($query){
-        mysql_query($query);
+        return mysql_query($query);
     }
 
     function delete($query){
-        mysql_query($query);
+        return mysql_query($query);
     }
 }
 
