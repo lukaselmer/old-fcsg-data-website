@@ -109,7 +109,7 @@ WHERE `id` = ".$this->cms_content->id." LIMIT 1 ;
     function backup() {
         $this->backup_dir = BASE_DIR.SYSTEM_SLASH."backup".SYSTEM_SLASH.$this->backup_dir.date("Y-m-d_G-i-s");
         mkdir($this->backup_dir);
-        chmod($this->backup_dir, "drwxrwxrwx");
+        chmod($this->backup_dir, 0777);
 
         $this->csv_exports = Array();
         $res_tables = $this->DB->query("show tables;");
