@@ -1,0 +1,23 @@
+
+<div>
+    <h3>Latest News</h3>
+    ~~~BeginItemsRecord~~~
+    <div class="rss-entry" style="margin: 10px 0 10px 0;">
+        <div>
+            <em>
+                ~~~ItemPubShortDate~~~ ~~~ItemPubShortTime~~~
+            </em>
+        </div>
+        <div>
+            <b><a href="~~~ItemLink~~~" onclick='Effect.toggle($(this).up(".rss-entry").down(".rss-description"), "slide"); return false;'>~~~ItemTitle~~~</a></b>
+        </div>
+        <div class="rss-description" style="margin: 8px 0 20px 0; display:none;">
+            <div style="width: 150px;">
+                <div style="margin: 0 0 4px 0;">~~~ItemDescriptionNoImg~~~</div>
+                <!-- <hr style="color:#00763B;" /> -->
+                <a href="~~~ItemLink~~~">weiterlesen...</a>
+            </div>
+        </div>
+    </div>
+    ~~~EndItemsRecord~~~
+</div>
