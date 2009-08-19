@@ -460,9 +460,9 @@ if (function_exists("FeedForAll_fopen") === FALSE) {
         $errno = "";
         $errstr = "";
         if (isset($connectTimeoutLimit) && $connectTimeoutLimit != 0) {
-          $fd = fsockopen($domain, $port, $errno, $errstr, $connectTimeoutLimit);
+          $fd = @fsockopen($domain, $port, $errno, $errstr, $connectTimeoutLimit);
         } else {
-          $fd = fsockopen($domain, $port, $errno, $errstr);
+          $fd = @fsockopen($domain, $port, $errno, $errstr);
         }
         if ($fd !== FALSE) {
           $request = "GET $thepath HTTP/1.0\r\n";
