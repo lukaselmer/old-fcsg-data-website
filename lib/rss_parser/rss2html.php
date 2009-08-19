@@ -113,13 +113,13 @@ $escapeAmpInLinks = 1;
 // $connectTimeoutLimit allows the limiting the amount of time cURL will
 // wait to successfully connect to a remote server.  Use with caution,
 // a value too small will cause all connections to fail.
-$connectTimeoutLimit = 1.5;
+$connectTimeoutLimit = 3;
 
 //
 // $hideErrors: This will prevent all error messages from being displayed.
 // CAUTION enabling this will cause rss2html.php to fail silently with
 // no indication to why there was no output
-// $hideErrors = 1;
+$hideErrors = 1;
 
 // ==========================================================================
 // Below this point of the file there are no user editable options.  Your
