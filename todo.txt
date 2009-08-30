@@ -1,0 +1,7 @@
+- Flicker Gallery
+- Alphabet grösser, nicht kursiv
+- Buttons oder unterstrichene Links
+- Klickbarkeit anzeigen
+- Admin Datumfeld -> Kalender
+- Speaking URL's
+- Top-Links
