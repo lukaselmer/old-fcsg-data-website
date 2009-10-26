@@ -89,19 +89,19 @@ WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
     }
 
     function edit_startpage_content() {
-        return edit_cms_content("startpage");
+        return $this->edit_cms_content("startpage");
     }
 
     function update_startpage_content() {
-        return update_cms_content("startpage");
+        return $this->update_cms_content("startpage");
     }
 
     function edit_contact_content() {
-        return edit_cms_content("contact");
+        return $this->edit_cms_content("contact");
     }
 
     function update_contact_content() {
-        return update_cms_content("contact");
+        return $this->update_cms_content("contact");
     }
 
     function edit_cms_content($key) {
