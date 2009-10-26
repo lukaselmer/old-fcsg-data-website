@@ -38,10 +38,11 @@
                 <li><? link_to('Administration', 'admin') ?></li>
 
                 <? if($authenticated){ ?>
-                <li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
-                <li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
-                <li><? link_to('Sicherung anlegen', 'admin', 'backup'); ?></li>
-                <li><? link_to('Logout', 'users', 'logout') ?></li>
+					<li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
+					<li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
+					<li><? link_to('Kontaktseite bearbeiten', 'admin', 'edit_contact_content'); ?></li>
+					<li><? link_to('Sicherung anlegen', 'admin', 'backup'); ?></li>
+					<li><? link_to('Logout', 'users', 'logout') ?></li>
                 <? } ?>
             </ul>
         </div>

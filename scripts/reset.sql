@@ -41,4 +41,6 @@ CREATE TABLE IF NOT EXISTS `cms_content` (
 INSERT INTO `cms_content` (`title`, `cms_key`, `content`) VALUES
 ('Startseite', 'startpage', '<p>Willkommen bei FCSG-Data!</p>');
 
+INSERT INTO `cms_content` (`title`, `cms_key`, `content`) VALUES
+('Kontakt', 'contact', '<p>Vielen Dank für Ihren Besuch!</p>');
 

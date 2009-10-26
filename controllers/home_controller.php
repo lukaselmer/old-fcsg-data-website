@@ -30,8 +30,8 @@ Datum / Zeit: ".date("d.m.Y H:i")."\n
             } else {
                 $this->error = "Bitte füllen Sie das Formular bitte korrekt aus.";
             }
-
         }
+        $this->contact_content = $this->DB->select_by_attribute("cms_content", "cms_key", "contact");
     }
 
     function contact_sent(){}
