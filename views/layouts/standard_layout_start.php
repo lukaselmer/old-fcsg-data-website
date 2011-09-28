@@ -42,6 +42,7 @@
 					<li><? link_to('Neuer Spieler', 'admin', 'nnew'); ?></li>
 					<li><? link_to('Startseite bearbeiten', 'admin', 'edit_startpage_content'); ?></li>
 					<li><? link_to('Kontakt bearbeiten', 'admin', 'edit_contact_content'); ?></li>
+					<li><? link_to('Journal bearbeiten', 'admin', 'edit_journal_content'); ?></li>
 					<li><? link_to('Sicherung anlegen', 'admin', 'backup'); ?></li>
 					<li><? link_to('Logout', 'users', 'logout') ?></li>
                 <? } ?>
