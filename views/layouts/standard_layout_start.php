@@ -35,6 +35,7 @@
             <ul>
                 <li><? link_to('Übersicht', 'players') ?></li>
                 <li><? link_to('Kontakt', 'home', 'contact') ?></li>
+                <li><? link_to('Journal', 'home', 'journal') ?></li>
                 <li><? link_to('Administration', 'admin') ?></li>
 
                 <? if($authenticated){ ?>

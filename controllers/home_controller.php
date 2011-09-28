@@ -35,6 +35,9 @@ Datum / Zeit: ".date("d.m.Y H:i")."\n
     }
 
     function contact_sent(){}
+    function journal(){
+        $this->journal_content = $this->DB->select_by_attribute("cms_content", "cms_key", "journal");
+    }
     function send_error(){}
 }
 

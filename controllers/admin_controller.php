@@ -104,6 +104,14 @@ WHERE `id` = ".intval($player_params['id'])." LIMIT 1 ;
         return $this->update_cms_content("contact");
     }
 
+    function edit_journal_content() {
+        return $this->edit_cms_content("journal");
+    }
+
+    function update_journal_content() {
+        return $this->update_cms_content("journal");
+    }
+
     function edit_cms_content($key) {
         $this->cms_content = $this->DB->select_by_attribute("cms_content", "cms_key", $key);
     }
