@@ -3,12 +3,11 @@
 $cfg = Array(
   'mysql' => Array(
         'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'fcsg-data'
+        'username' => 'fcsg_data',
+        'password' => 'stgallen',
+        'database' => 'fcsg_data'
     ),
     'env' => 'production',
-
 );
 
 ?>
